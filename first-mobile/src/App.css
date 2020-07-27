@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.fundo {
+  background-size: cover;
+  background-position: center;
+  height: 821px;
+  background-image: url(../src/assets/Rectangle.png);
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 600px) {
+  .fundo {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../src/assets/Rectangle.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.titulo1 {
+  position: absolute;
+  left: 5.07%;
+  right: 5.07%;
+  top: 60.59%;
+  bottom: 33.99%;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  /* or 157% */
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.titulo2 {
+  position: absolute;
+  left: 5.07%;
+  right: 5.07%;
+  top: 69.59%;
+  bottom: 33.99%;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 300;
+
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.logointro {
+  position: absolute;
+  left: 39.13%;
+  right: 33.87%;
+  top: 31.83%;
+  bottom: 53.16%;
+  width: 92px;
+  height: 115px;
+}
+
