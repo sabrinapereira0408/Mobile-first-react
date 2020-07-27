@@ -1,4 +1,4 @@
-# -Mobile-first-react
+# Mobile-first-react
 
 Bora para mais um desafio. :)
 
