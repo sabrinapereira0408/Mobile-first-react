@@ -20,8 +20,8 @@ const ColorButton = withStyles(theme => ({
     position: "absolute",
     width: "48px",
     height: "48px",
-    left: "310px",
-    top: "651px",
+    left: "1100px",
+    top: "506px",
     background: "#E57728",
     borderRadius: "8px"
   }

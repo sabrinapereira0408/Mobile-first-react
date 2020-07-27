@@ -16,7 +16,7 @@
 .fundo {
   background-size: cover;
   background-position: center;
-  height: 821px;
+  height: 637px;
   background-image: url(../src/assets/Rectangle.png);
   background-repeat: no-repeat;
 }
@@ -56,9 +56,9 @@
 
 .titulo1 {
   position: absolute;
-  left: 5.07%;
+  left: 7.93%;
   right: 5.07%;
-  top: 60.59%;
+  top: 46.59%;
   bottom: 33.99%;
 
   font-family: Montserrat;
@@ -75,9 +75,9 @@
 
 .titulo2 {
   position: absolute;
-  left: 5.07%;
+  left: 7.93%;
   right: 5.07%;
-  top: 69.59%;
+  top: 53.59%;
   bottom: 33.99%;
 
   font-family: Montserrat;
@@ -95,9 +95,9 @@
 
 .logointro {
   position: absolute;
-  left: 39.13%;
+  left: 48.13%;
   right: 33.87%;
-  top: 31.83%;
+  top: 14.83%;
   bottom: 53.16%;
   width: 92px;
   height: 115px;

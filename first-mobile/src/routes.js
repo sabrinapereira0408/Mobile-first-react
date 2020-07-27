@@ -16,6 +16,8 @@ const Routes = () => (
                 <Route path="/intro" component={Intro}/>
                 <Route path="/register" component={Cadastro}/>
                 <Route path="/login" component={Login}/>
+                <Route path="/" component={Login}/>
+
             </Switch>
         </Suspense>
     </Router>

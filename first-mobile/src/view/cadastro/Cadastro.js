@@ -16,9 +16,9 @@ import "../../App.css";
 const ColorButton = withStyles(theme => ({
   root: {
     position: "absolute",
-    left: "61.73%",
+    left: "54.73%",
     right: "52.27%",
-    top: "81.86%",
+    top: "110.86%",
     bottom: "17.24%",
     width:"144px",
     height:"63px",
@@ -31,9 +31,9 @@ const ColorButton = withStyles(theme => ({
 const ColorButtonCadastrar = withStyles(theme => ({
   root: {
     position: "absolute",
-    left: "7.73%",
+    left: "34.6%",
     right: "52.27%",
-    top: "81.86%",
+    top: "110.86%",
     bottom: "17.24%",
     width:"144px",
     height:"63px",
@@ -54,7 +54,7 @@ export class Cadastro extends Component {
   };
   render() {
     return (
-      <div className="fundo">
+      // <div className="fundo">
         <Container Component="main" maxWidth="xs">
           <div className="mt-4 mt-md-5">
             <div className="text-center">
@@ -171,7 +171,7 @@ export class Cadastro extends Component {
             </div>
           </div>
         </Container>
-      </div>
+      // </div>
     );
   }
 }
