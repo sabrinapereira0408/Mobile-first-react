@@ -8,7 +8,6 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { green } from "@material-ui/core/colors";
 import { changeValue, cadastroUser } from "../../store/actions/cadastro.action";
-import { rootUrl } from "../../config/globalConfig";
 
 
 import "../../App.css";
@@ -45,13 +44,13 @@ const ColorButtonCadastrar = withStyles(theme => ({
 }))(Button);
 
 export class Cadastro extends Component {
-  cadastrar = () => {
-    this.props.cadastroUser(this.props.cadastro).then(() => {
-      if (this.props.sucess) {
-        Window.location.replace(rootUrl + "intro  ");
-      }
-    });
-  };
+  // cadastrar = () => {
+  //   this.props.cadastroUser(this.props.cadastro).then(() => {
+  //     if (this.props.sucess) {
+  //       Window.location.replace(rootUrl + "intro  ");
+  //     }
+  //   });
+  // };
   render() {
     return (
       // <div className="fundo">
