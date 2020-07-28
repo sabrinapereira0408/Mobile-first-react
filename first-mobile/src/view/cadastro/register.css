@@ -1,0 +1,10 @@
+.c-register__register {
+    display: flex;
+    justify-content: space-between;
+    margin: 36px 0;
+}
+
+.c-register__login {
+    color: white !important;
+    font-family: Montserrat, sans-serif;
+}

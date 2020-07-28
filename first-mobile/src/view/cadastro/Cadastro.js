@@ -1,45 +1,36 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { withStyles } from "@material-ui/core/styles";
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {withStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import { green } from "@material-ui/core/colors";
-import { changeValue, cadastroUser } from "../../store/actions/cadastro.action";
-
-
+import {changeValue, cadastroUser} from "../../store/actions/cadastro.action";
 import "../../App.css";
+import "./register.css";
+import Typography from "@material-ui/core/Typography";
 
 const ColorButton = withStyles(theme => ({
   root: {
-    position: "absolute",
-    left: "54.73%",
-    right: "52.27%",
-    top: "110.86%",
-    bottom: "17.24%",
-    width:"144px",
-    height:"63px",
-
     background: '#3A5998',
-    borderRadius: "8px"
-    
+    borderRadius: "8px",
+    height: '100%',
+    padding: '16px',
+    color: 'white',
+    fontWeight: '700',
+    textTransform: 'uppercase'
   }
 }))(Button);
 const ColorButtonCadastrar = withStyles(theme => ({
   root: {
-    position: "absolute",
-    left: "34.6%",
-    right: "52.27%",
-    top: "110.86%",
-    bottom: "17.24%",
-    width:"144px",
-    height:"63px",
-
     background: '#E57728',
-    borderRadius: "8px"
-    
+    borderRadius: "8px",
+    height: '100%',
+    padding: '16px',
+    marginRight: '12px',
+    color: 'white',
+    fontWeight: '700',
+    textTransform: 'uppercase'
   }
 }))(Button);
 
@@ -53,9 +44,9 @@ export class Cadastro extends Component {
   // };
   render() {
     return (
-      // <div className="fundo">
-        <Container Component="main" maxWidth="xs">
-          <div className="mt-4 mt-md-5">
+      <div className="c-main">
+        <Container>
+          <div className="pt-4 pt-md-5 c-register">
             <div className="text-center">
               <img
                 className="mt-4"
@@ -64,103 +55,144 @@ export class Cadastro extends Component {
                 width="191px"
                 height="80px"
                 transform=" matrix(1, 0, 0, -1, 0, 0)"
-              />
+                alt="g3721"/>
             </div>
             <div className="mt-4">
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Nome
+              </Typography>
               <TextField
                 className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="name"
-                label="Nome"
                 name="name"
                 type="name"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Sobrenome
+              </Typography>
               <TextField
+                className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="sobrenome"
-                label="Sobrenome"
                 name="sobrenome"
                 type="sobrenome"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Username
+              </Typography>
               <TextField
+                className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="username"
-                label="Username"
                 name="username"
                 type="username"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Email
+              </Typography>
               <TextField
+                className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="email"
-                label="Email"
                 name="email"
                 type="email"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
-
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Senha
+              </Typography>
               <TextField
+                className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="password"
-                label="Senha"
                 name="password"
                 type="password"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
+              >
+                Confirmar Senha
+              </Typography>
               <TextField
+                className="input"
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="confirmar"
-                label=" Confirmar Senha"
                 name="confirmar"
                 type="confirmar"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
 
-              <ColorButtonCadastrar
-                type="button"
-                variant="contained"
-                fullWidth
-                background="#E57728"
-                size="large"
-                className="mb-3 mb-md-4 mt-4"
-                width="50px"
-                href="/register"
+              <div className="c-register__register">
+                <ColorButtonCadastrar
+                  type="button"
+                  variant="contained"
+                  fullWidth
+                  background="#E57728"
+                  size="large"
+                  className="mb-3 mb-md-4 mt-4"
+                  width="50px"
+                  href="/register"
 
-                onClick={() => this.cadastrar()}
-              >
-                CADASTRAR
-              </ColorButtonCadastrar>
-              <ColorButton
-                type="button"
-                fullWidth
-                size="large"
-                variant="contained"
-                className="mt-4"
-                href="/login"
+                  onClick={() => this.cadastrar()}
+                >
+                  CADASTRAR
+                </ColorButtonCadastrar>
+                <ColorButton
+                  type="button"
+                  fullWidth
+                  size="large"
+                  variant="contained"
+                  className="mt-4"
+                  href="/login"
 
-              >
-                SING IN
-              </ColorButton>
-              {/* </Button> */}
+                >
+                  <img src="facebook.svg" alt="facebook" className="mr-3"/>
+                  Sign in
+                </ColorButton>
+              </div>
               <div className="text-center">
                 <Link
                   href="/login"
-                  className="mt-4"
-                  color="secondary"
+                  className="mt-2 c-register__login"
                   variant="body2"
 
                 >
@@ -170,10 +202,11 @@ export class Cadastro extends Component {
             </div>
           </div>
         </Container>
-      // </div>
+      </div>
     );
   }
 }
+
 const mapStateToProps = state => ({
   cadastro: state.cadastroReducer.cadastro,
   sucess: state.cadastroReducer.sucess,

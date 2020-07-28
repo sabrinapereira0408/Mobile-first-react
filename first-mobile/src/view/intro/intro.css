@@ -1,0 +1,103 @@
+.c-intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding: 0 48px;
+}
+
+.c-intro__logo {
+    max-width: 120px;
+    max-height: 154px;
+    margin-bottom: 60px;
+}
+
+.c-intro__next {
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+    border-radius: 100%;
+    background: #E57728;
+    border: none;
+    outline: none;
+}
+
+.c-intro__title {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.c-intro__subtitle {
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);;
+}
+
+.c-intro__actions-ellipses,
+.c-intro__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-intro__action {
+    background: #E57728;
+    height: 12px;
+    outline: none;
+}
+
+.c-intro__action--rectangle {
+    border-radius: 8px;
+    width: 36px;
+}
+
+.c-intro__action--circle {
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    opacity: 0.25;
+    margin-left: 8px;
+}
+
+.c-intro__ellipses-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    top: 40px;
+    left: -30px;
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+}
+
+.c-intro__ellipses-middle {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    top: 20%;
+    right: 12px;
+    background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transform: rotate(-15.82deg);
+}
+
+.c-intro__ellipses-bottom {
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    border-top-right-radius: 100%;
+
+}

@@ -1,0 +1,27 @@
+.c-login__header {
+    width: 100%;
+}
+
+.c-login__content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-login__submit {
+    width: 100%;
+}
+
+.c-login__login {
+    padding: 24px 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+}
+
+.c-login__register {
+    color: white !important;
+    font-weight: 300;
+    font-family: Montserrat, sans-serif;
+}

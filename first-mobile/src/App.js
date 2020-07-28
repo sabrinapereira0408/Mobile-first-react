@@ -1,10 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import logo from "./logo.svg";
 import "./App.css";
-import Sidebar from "./components/sideBar";
-import Usuarios from "./components/usuarios";
 
 import Routes from "./routes";
 

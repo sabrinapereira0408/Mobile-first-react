@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { withStyles } from "@material-ui/core/styles";
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {withStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import { green } from "@material-ui/core/colors";
+import './login.css';
+import InputAdornment from "@material-ui/core/InputAdornment";
+import IconButton from "@material-ui/core/IconButton";
 
 const ColorButton = withStyles(theme => ({
   root: {
@@ -22,80 +24,70 @@ const ColorButton = withStyles(theme => ({
 export class Login extends Component {
   render() {
     return (
-      <div>
-        <Container Component="main" maxWidth="xs">
-          <div className="mt-4 mt-md-5">
-            <div className="text-center">
-              <img
-                className="mt-4"
-                src="g3721.png"
-                position="absolute"
-                width="280.01px"
-                height="155.01px"
-                transform=" matrix(1, 0, 0, -1, 0, 0)"
-              />
-              
-            </div>
-            <div className="mt-4">
-            <Typography
-                className="mt-3  font-family-montserrat"
-                component="h3"
-                variant="h6"
-                color="#fff"
+      <div className="c-main">
+        <Container>
+          <div className="pt-4 pt-md-5 c-login__content">
+            <div className="c-login__header">
+              <div className="text-center mb-5">
+                <img
+                  className="mt-4"
+                  src="g3721.png"
+                  position="absolute"
+                  width="280.01px"
+                  height="155.01px"
+                  transform=" matrix(1, 0, 0, -1, 0, 0)"
+                  alt="mt-4"/>
+              </div>
+              <Typography
+                className="mt-3 font-family-montserrat c-field__label"
               >
                 EMAIL
               </Typography>
               <TextField
                 variant="outlined"
-                margin="normal"
                 required
                 fullWidth
                 id="email"
-                label="Email"
                 name="username"
                 type="email"
+                InputProps={{
+                  className: 'input-field',
+                }}
               />
               <Typography
-                className="mt-3  font-family-montserrat"
-                component="h3"
-                variant="h6"
-                color="#fff"
+                className="mt-3 font-family-montserrat c-field__label"
               >
                 SENHA
               </Typography>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="password"
-                label="Senha"
-                name="password"
-                type="password"
-                
-              />
-              {/* <Button
-                type="button"
-                variant="contained"
-                fullWidth
-                backgroundColor="#E57728"
-                size="large"
-                className="mb-3 mb-md-4 mt-4"
-              > */}
-              <ColorButton
-                type="button"
-                fullWidth
-                size="large"
-                variant="contained"
-                className="mt-4"
-                href="/intro"
-              >
-                Login
-              </ColorButton>
-              {/* </Button> */}
+              <div className="c-field__label-password">
+                <img src="eye.svg" alt="eye" className="c-field__label-password-eye"/>
+                <TextField
+                  variant="outlined"
+                  className="mb-5"
+                  required
+                  fullWidth
+                  id="password" name="password"
+                  type="password"
+                  InputProps={{
+                    className: 'input-field',
+                  }}
+                />
+              </div>
+              <div className="mt-4 c-login__submit">
 
-              <Link href="/register" className="mt-4">
-                {/* <ColorButton
+                <ColorButton
+                  type="button"
+                  variant="contained"
+                  className="mt-4 c-login__login"
+                  href="/intro"
+                >
+                  Login
+                </ColorButton>
+              </div>
+            </div>
+
+            <Link href="/register" className="mb-4 c-login__register">
+              {/* <ColorButton
                   type="button"
                   fullWidth
                   size="large"
@@ -104,9 +96,8 @@ export class Login extends Component {
                 >
                   Cadastrar
                 </ColorButton> */}
-                Ainda não possui uma conta ? Cadastre-se
-              </Link>
-            </div>
+              Ainda não possui uma conta ? <u>Cadastre-se</u>
+            </Link>
           </div>
         </Container>
       </div>
